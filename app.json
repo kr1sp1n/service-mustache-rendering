@@ -1,0 +1,7 @@
+{
+  "name": "service-mustache-rendering",
+  "description": "Logic-less templates as a service",
+  "repository": "https://github.com/kr1sp1n/service-mustache-rendering",
+  "keywords": ["mustache", "template", "service"],
+  "image": "heroku/nodejs"
+}
