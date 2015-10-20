@@ -25,6 +25,7 @@
   "homepage": "https://github.com/kr1sp1n/service-mustache-rendering#readme",
   "dependencies": {
     "body-parser": "1.14.1",
+    "etcd-registry-join": "^1.0.0",
     "express": "4.13.3",
     "mustache": "2.2.0"
   },

@@ -1,17 +1,18 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var rendering = require(__dirname + '/index.js');
+var express = require('express')
+var bodyParser = require('body-parser')
+var rendering = require(__dirname + '/index.js')
 
-var router = express.Router();
-router.use(bodyParser.json());
-router.use(function(req, res, next) {
+var router = express.Router()
+router.use(bodyParser.json())
+router.use(function (req, res, next) {
   try {
-    req.body.template = JSON.stringify(req.body.template);
-  } catch(e) {
-    console.log(e);
+    req.body.template = JSON.stringify(req.body.template)
+  } catch (e) {
+    console.log(e)
   }
-  next();
-});
+  next()
+})
+
 router.use(function(req, res, next) {
   var options = req.body;
   rendering(options, function(err, result) {
