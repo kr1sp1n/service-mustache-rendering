@@ -1,8 +1,8 @@
 var Mustache = require('mustache');
 
-module.exports = function(req, res, next) {
-  var template = req.body.template || "";
-  var data = req.body.data || {};
-  req.result = Mustache.render(template, data);
-  next();
+module.exports = function(options, done) {
+  var template = options.template || "";
+  var data = options.data || {};
+  var result = Mustache.render(template, data);
+  return done(null, result);
 };
